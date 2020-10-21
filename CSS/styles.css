@@ -290,3 +290,45 @@ h1{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/*skills*/
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+ 
+   
+
+}
+
+.left {
+  width: 25%;
+  margin-left: 200px;
+  background: rgb(151, 147, 147);
+}
+
+.right {
+  width: 50%;
+  margin-right: 10px;
+}
+
+/* Clear floats after the columns */
+.roww:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+* {
+  box-sizing: border-box;
+}
+
+.big{
+  font-size:4em;
+  margin-left: 30%;
+  margin-right: auto;
+  font-family: Courier, monospace;
+  text-align:center;
+  margin-top: 40px;
+  
+}
+
