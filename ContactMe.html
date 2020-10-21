@@ -1,0 +1,106 @@
+                 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>This is my first page</title>
+    
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src=" http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+       
+    <!--
+      <link rel="stylesheet" href="CSS/styles.css">
+
+    <link rel="stylesheet" href="CSS/logo.css">
+   <link rel="stylesheet" href="CSS/contacMe.css">
+    -->
+    
+    
+
+  </head>
+
+  <body>
+    <div class="center ">
+      <a href="index.html"> Home </a>
+      &nbsp;
+      <a href="Education.html"> About-me</a>      
+      &nbsp;
+      <a href="Skills.html"> Skills</a>
+      &nbsp;
+      <a href="Hobbies.html"> Hobbies</a>                  
+      &nbsp;
+      <a hrel="stylesheet" href="https://www.linkedin.com/in/yasmine-benzaid/">LinkedIn</a>
+      &nbsp;
+      <a href="ContactMe.html"> Contact-me</a>
+      <hr class="color"> </hr>
+    </div>
+    
+
+
+
+    <div id="envelope" class="pulse ">
+      <div id="envelope-up"></div>
+      <form id="card">
+        <div id="close" ></div>
+        <h1>Need answers?</h1>
+        <input type="text" id="name" name="user_name" placeholder="Who are you?">
+        <input type="text" id="email" name="email" placeholder="Enter your e-mail address">
+        <textarea id="message" name="message" placeholder="Your message goes here.."></textarea>
+        <input type="button" value="Send!" id="mailit">
+        
+      </form>
+     
+    </div>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+
+var ANIMATION_TIME = 500;
+var envelope = $("#envelope");
+var envelopeUp = $("#envelope-up");
+var card = $('#card');
+var close = $('#close');
+var send = $('#mailit');
+
+envelope.click(function() {
+  if (!$(this).hasClass('flip')) {
+    $(this).removeClass('pulse');
+    $(this).addClass('flip');
+    envelopeUp.fadeOut(ANIMATION_TIME);
+    window.setTimeout(function() {
+      card.find('h1').hide().fadeIn(300);
+      card.css('display', 'block');
+    }, ANIMATION_TIME);
+  }
+});
+
+close.click(function(e) {
+  card.css('display', 'none');
+  envelope.removeClass('flip').addClass('flip-back');
+  envelopeUp.fadeIn(ANIMATION_TIME);
+  window.setTimeout(function() {
+    envelope.removeClass('flip-back');
+    envelope.addClass('pulse');
+  }, ANIMATION_TIME);
+  e.stopPropagation();
+});
+
+send.click(function(e) {
+  card.css('display', 'none');
+  envelope.removeClass('flip').addClass('send');
+  e.stopPropagation();
+
+});
+
+});
+</script>
+
+
+  </body>
+ 
